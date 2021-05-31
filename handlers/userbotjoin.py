@@ -20,7 +20,7 @@ async def addchannel(client, message):
     try:
         user = await USER.get_me()
     except:
-        user.first_name =  "VCPlaybot"
+        user.first_name =  "Zelda Music Bot"
 
     try:
         await USER.join_chat(invitelink)
@@ -38,7 +38,7 @@ async def addchannel(client, message):
         )
         return
     await message.reply_text(
-            "<b>@VCPlayRobot userbot joined your chat</b>",
+            "<b>@zeldamusicbot userbot joined your chat</b>",
         )
     
 @USER.on_message(filters.group & filters.command(["userbotleave"]))
