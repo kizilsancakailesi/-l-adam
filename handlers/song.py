@@ -315,18 +315,18 @@ async def deezsong(_, message):
     is_downloading = False
 
 
-@Client.on_message(filters.command(["vsong", "video"]))
+@Client.on_message(filters.command(["vsong", "klip"]))
 async def ytmusic(client,message: Message):
     global is_downloading
     if is_downloading:
-        await message.reply_text("Another download is in progress, try again after sometime.")
+        await message.reply_text("Başka bir indirme devam ediyor, bir süre sonra yeniden deneyin.")
         return
 
     urlissed = get_text(message)
 
     pablo =  await client.send_message(
             message.chat.id,
-            f"`Getting {urlissed} From Youtube Servers. Please Wait.`")
+            f"`Alma {urlissed} Youtube Sunucularından. Lütfen bekleyin.`")
     if not urlissed:
         await pablo.edit("Invalid Command Syntax, Please Check Help Menu To Know More!")
         return
@@ -364,7 +364,7 @@ async def ytmusic(client,message: Message):
 
             if duration > 8:
                 await pablo.edit(
-                    f"❌ Videos longer than 8 minute(s) aren't allowed, the provided video is {duration} minute(s)"
+                    f"❌ Daha uzun videolar 8 dakika(s) izin verilmezse, sağlanan video {duration} dakika(s)"
                 )
                 is_downloading = False
                 return
@@ -372,14 +372,14 @@ async def ytmusic(client,message: Message):
             
     
     except Exception as e:
-        #await pablo.edit(event, f"**Failed To Download** \n**Error :** `{str(e)}`")
+        #await pablo.edit(event, f"**Karşıdan yüklenemedi** \n**Hata :** `{str(e)}`")
         is_downloading = False
         return
     
     c_time = time.time()
     file_stark = f"{ytdl_data['id']}.mp4"
-    capy = f"**Video Name ➠** `{thum}` \n**Requested For :** `{urlissed}` \n**Channel :** `{thums}` \n**Link :** `{mo}`"
-    await client.send_video(message.chat.id, video = open(file_stark, "rb"), duration = int(ytdl_data["duration"]), file_name = str(ytdl_data["title"]), thumb = sedlyf, caption = capy, supports_streaming = True , progress=progress, progress_args=(pablo, c_time, f'`Uploading {urlissed} Song From YouTube Music!`', file_stark))
+    capy = f"**Video Adı ➠** `{thum}` \n**İstenen :** `{urlissed}` \n**Kanal :** `{thums}` \n**Link :** `{mo}`"
+    await client.send_video(message.chat.id, video = open(file_stark, "rb"), duration = int(ytdl_data["süre"]), file_name = str(ytdl_data["başlık"]), thumb = sedlyf, caption = capy, supports_streaming = True , progress=progress, progress_args=(pablo, c_time, f'`Yükleme {urlissed} YouTube Music'ten Şarkı!`', file_stark))
     await pablo.delete()
     is_downloading = False
     for files in (sedlyf, file_stark):
