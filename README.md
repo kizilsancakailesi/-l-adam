@@ -23,26 +23,25 @@ Get STRING_NAME from here:
 
 ## Commands 🛠
 
-- `/play <song name>` - play song you requested
-- `/dplay <song name>` - play song you requested via deezer
-- `/splay <song name>` - play song you requested via jio saavn
-- `/playlist` - Show now playing list
-- `/current` - Show now playing
-- `/song <song name>` - download songs you want quickly
-- `/search <query>` - search videos on youtube with details
-- `/deezer <song name>` - download songs you want quickly via deezer
-- `/saavn <song name>` - download songs you want quickly via saavn
-- `/video <song name>` - download videos you want quickly
-
+- '/oynat <song name>' - istediğiniz şarkıyı çalın
+- '/dplay <song adı>' - deezer aracılığıyla istediğiniz şarkıyı çalın
+- '/splay <song name>' - jio saavn aracılığıyla istediğiniz şarkıyı çalın
+- '/oynatlist' - Şimdi çalma listesini göster
+- '/geçerli' - Şimdi oynatıyor göster
+- '/yükle <song name>' - istediğiniz şarkıları hızlı bir şekilde indirin
+- '/link <query>' - youtube'da detayları içeren videoları arayın
+- '/deezer <song adı>' - deezer aracılığıyla istediğiniz şarkıları hızlı bir şekilde indirin
+- '/saavn <song adı>' - istediğiniz şarkıları saavn üzerinden hızlı bir şekilde indirin
+- '/video indirme komutu kısaca. 
 #### Admins only.
-- `/player` - open music player settings panel
-- `/pause` - pause song play
-- `/resume` - resume song play
-- `/skip` - play next song
-- `/end` - stop music play
-- `/userbotjoin` - invite assistant to your chat
-- `/userbotleave` - remove assistant from your chat
-- `/admincache` - Refresh admin list
+- '/oyuncu' - müzik çalar ayarları panelini açma
+- '/durdur' - şarkı çalmayı duraklat
+- '/devam' - şarkı çalmaya devam et
+- '/atla' - sonraki şarkıyı çal
+- '/bitir' - müzik çalmayı durdur
+- '/katil' - asistanı sohbetinize davet edin
+- '/ayril' - asistanı sohbetinizden çıkarın
+- '/admincache' - Yönetici listesini yenile
 
 ## Requirements
 
