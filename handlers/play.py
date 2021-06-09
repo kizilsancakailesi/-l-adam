@@ -122,7 +122,7 @@ async def generate_cover(requested_by, title, views, duration, thumbnail):
  
 
 @Client.on_message(
-    filters.command("playlist")
+    filters.command("oynatlist")
     & filters.group
     & ~ filters.edited
 )
@@ -136,13 +136,13 @@ async def playlist(client, message):
         temp.append(t)
     now_playing = temp[0][0]
     by = temp[0][1].mention(style='md')
-    msg = "**Now Playing** in {}".format(message.chat.title)
+    msg = "**Şimdi Yürütülen** in {}".format(message.chat.title)
     msg += "\n- "+ now_playing
     msg += "\n- Req by "+by
     temp.pop(0)
     if temp:
         msg += '\n\n'
-        msg += '**Queue**'
+        msg += '**sıra**'
         for song in temp:
             name = song[0]
             usr = song[1].mention(style='md')
@@ -174,18 +174,18 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('⏹', 'leave'),
-                InlineKeyboardButton('⏸', 'puse'),
-                InlineKeyboardButton('▶️', 'resume'),
-                InlineKeyboardButton('⏭', 'skip')
+                InlineKeyboardButton('⏹', 'ayrıl'),
+                InlineKeyboardButton('⏸', 'durdur'),
+                InlineKeyboardButton('▶️', 'devam'),
+                InlineKeyboardButton('⏭', 'atla')
                 
             ],
             [
-                InlineKeyboardButton('Playlist 📖', 'playlist'),
+                InlineKeyboardButton('oynatlist 📖', 'playlist'),
                 
             ],
             [       
-                InlineKeyboardButton("❌ Close",'cls')
+                InlineKeyboardButton("❌ Kapat",'cls')
             ]        
         ]
     )
@@ -202,10 +202,10 @@ async def ee(client, message):
     if stats:
         await message.reply(stats)              
     else:
-        await message.reply('No VC instances running in this chat')
+        await message.reply('Bu sohbette çalışan VC örneği yok')
 
 @Client.on_message(
-    filters.command("player")
+    filters.command("oyuncu")
     & filters.group
     & ~ filters.edited
 )
@@ -223,9 +223,9 @@ async def settings(client, message):
         else:
             await message.reply(stats, reply_markup=r_ply('play'))
     else:
-        await message.reply('No VC instances running in this chat')
+        await message.reply('Bu sohbette çalışan VC örneği yok')
 
-@Client.on_callback_query(filters.regex(pattern=r'^(playlist)$'))
+@Client.on_callback_query(filters.regex(pattern=r'^(oynatlist)$'))
 async def p_cb(b, cb):
     global que    
     qeue = que.get(cb.message.chat.id)
@@ -236,19 +236,19 @@ async def p_cb(b, cb):
     if type_ == 'playlist':           
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit('Player is idle')
+            await cb.message.edit('Player boşta')
         temp = []
         for t in queue:
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**şimdi yürütülen** in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Queue**'
+             msg += '**Sıra**'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
@@ -296,19 +296,19 @@ async def m_cb(b, cb):
     elif type_ == 'playlist':
         queue = que.get(cb.message.chat.id)
         if not queue:   
-            await cb.message.edit('Player is idle')
+            await cb.message.edit('Player boşta')
         temp = []
         for t in queue:
             temp.append(t)
         now_playing = temp[0][0]
         by = temp[0][1].mention(style='md')
-        msg = "**Now Playing** in {}".format(cb.message.chat.title)
+        msg = "**şimdi yürütülen** in {}".format(cb.message.chat.title)
         msg += "\n- "+ now_playing
         msg += "\n- Req by "+by
         temp.pop(0)
         if temp:
              msg += '\n\n'
-             msg += '**Queue**'
+             msg += '**Sıra**'
              for song in temp:
                  name = song[0]
                  usr = song[1].mention(style='md')
