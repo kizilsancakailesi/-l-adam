@@ -266,7 +266,7 @@ async def m_cb(b, cb):
     m_chat = cb.message.chat
 
     the_data = cb.message.reply_markup.inline_keyboard[1][0].callback_data
-    if type_ == 'pause':
+    if type_ == 'durdur':
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
                 ) or (
@@ -276,11 +276,11 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.pause_stream(chat_id)
             
-            await cb.answer('Music Paused!')
-            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('play'))
+            await cb.answer('Müzik Duraklatıldı!')
+            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('oynat'))
                 
 
-    elif type_ == 'play':       
+    elif type_ == 'oynat':       
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
             ) or (
@@ -290,10 +290,10 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
             await cb.answer('Music Resumed!')
-            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('pause'))
+            await cb.message.edit(updated_stats(m_chat, qeue), reply_markup=r_ply('durdur'))
                      
 
-    elif type_ == 'playlist':
+    elif type_ == 'oynatlist':
         queue = que.get(cb.message.chat.id)
         if not queue:   
             await cb.message.edit('Player boşta')
@@ -316,7 +316,7 @@ async def m_cb(b, cb):
                  msg += f'\n- Req by {usr}\n'
         await cb.message.edit(msg)      
                       
-    elif type_ == 'resume':     
+    elif type_ == 'devam':     
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
             ) or (
@@ -326,7 +326,7 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
             await cb.answer('Music Resumed!')     
-    elif type_ == 'puse':         
+    elif type_ == 'durdur':         
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
                 ) or (
@@ -336,19 +336,19 @@ async def m_cb(b, cb):
         else:
             callsmusic.pytgcalls.pause_stream(chat_id)
             
-            await cb.answer('Music Paused!')
+            await cb.answer('Müzik Duraklatıldı!')
     elif type_ == 'cls':          
-        await cb.answer('Closed menu')
+        await cb.answer('Kapalı menü')
         await cb.message.delete()       
 
     elif type_ == 'menu':  
         stats = updated_stats(cb.message.chat, qeue)  
-        await cb.answer('Menu opened')
+        await cb.answer('Menü açıldı')
         marr = InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton('⏹', 'ayrilmak'),
-                    InlineKeyboardButton('⏸', 'pause'),
+                    InlineKeyboardButton('⏸', 'durdur'),
                     InlineKeyboardButton('▶️', 'devam'),
                     InlineKeyboardButton('⏭', 'atla')
                 
@@ -363,7 +363,7 @@ async def m_cb(b, cb):
             ]
         )
         await cb.message.edit(stats, reply_markup=marr) 
-    elif type_ == 'skip':        
+    elif type_ == 'atla':        
         if qeue:
             skip = qeue.pop(0)
         if chat_id not in callsmusic.pytgcalls.active_calls:
