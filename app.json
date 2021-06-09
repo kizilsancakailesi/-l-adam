@@ -14,16 +14,16 @@
             "description": "From @BotFather",
             "required": true
         },
-        "Bot_Adı": {
+        "Botunuzun_Adı": {
             "description": "Your bot Name.",
             "required": false,
             "value": "Muzik pınarı 🎵"
        },
-        "API_ID": {
+        "Apı_id": {
             "description": "From my.telegram.org/apps",
             "required": true
         },
-        "API_HASH": {
+        "Apı_Hash": {
             "description": "From my.telegram.org/apps",
             "required": true
         },
