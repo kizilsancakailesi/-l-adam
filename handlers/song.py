@@ -21,8 +21,8 @@ import sys
 import time
 from helpers.errors import DurationLimitError
 
-@Client.on_message(filters.command('yükle') & ~filters.channel)
-def yükle(client, message):
+@Client.on_message(filters.command('bul') & ~filters.channel)
+def bul(client, message):
 
     user_id = message.from_user.id 
     user_name = message.from_user.first_name 
@@ -51,7 +51,7 @@ def yükle(client, message):
 
     except Exception as e:
         m.edit(
-            "❌ Found Nothing.\n\nTry another keywork or maybe spell it properly."
+            "❌ Hiçbir Şey Bulunamadı.\n\nBaşka bir anahtarlık deneyin veya belki düzgün heceleyin."
         )
         print(str(e))
         return
