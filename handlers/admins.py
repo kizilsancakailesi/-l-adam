@@ -27,42 +27,42 @@ async def update_admin(client, message):
 
 
 
-@Client.on_message(command("pause") & other_filters)
+@Client.on_message(command("durdur") & other_filters)
 @errors
 @authorized_users_only
-async def pause(_, message: Message):
+async def durdur(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'paused'
     ):
-        await message.reply_text("❗ Nothing is playing!")
+        await message.reply_text("❗ Hiçbir şey oynatılmıyo.!")
     else:
         callsmusic.pytgcalls.pause_stream(message.chat.id)
-        await message.reply_text("▶️ Paused!")
+        await message.reply_text("▶️ Duraklatıldı!")
 
 
-@Client.on_message(command("resume") & other_filters)
+@Client.on_message(command("devam") & other_filters)
 @errors
 @authorized_users_only
-async def resume(_, message: Message):
+async def devam(_, message: Message):
     if (
             message.chat.id not in callsmusic.pytgcalls.active_calls
     ) or (
             callsmusic.pytgcalls.active_calls[message.chat.id] == 'playing'
     ):
-        await message.reply_text("❗ Nothing is paused!")
+        await message.reply_text("❗ Hiçbir şey duraklatılmadı!")
     else:
         callsmusic.pytgcalls.resume_stream(message.chat.id)
-        await message.reply_text("⏸ Resumed!")
+        await message.reply_text("⏸ Devam!")
 
 
-@Client.on_message(command("end") & other_filters)
+@Client.on_message(command("bitir") & other_filters)
 @errors
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is streaming!")
+        await message.reply_text("❗ akış yok Oyantılmıyor!")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -70,16 +70,16 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("❌ Stopped streaming!")
+        await message.reply_text("❌ Müzik botu kapatıldı.🤖")
 
 
-@Client.on_message(command("skip") & other_filters)
+@Client.on_message(command("atla") & other_filters)
 @errors
 @authorized_users_only
-async def skip(_, message: Message):
+async def atla(_, message: Message):
     global que
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗ Nothing is playing to skip!")
+        await message.reply_text("❗ Atlatılmak için akış yok galiba! 🤔")
     else:
         callsmusic.queues.task_done(message.chat.id)
 
@@ -101,9 +101,9 @@ async def skip(_, message: Message):
 
 
 @Client.on_message(
-    filters.command("admincache")
+    filters.command("yönetim")
 )
 @errors
 async def admincache(client, message: Message):
     set(message.chat.id, [member.user for member in await message.chat.get_members(filter="administrators")])
-    #await message.reply_text("✯𝗩𝗖𝗣𝗹𝗮𝘆𝗕𝗼𝘁✯=❇️ Admin cache refreshed!")
+    #await message.reply_text("✯MüzikAsistanBot✯=❇️ Yönetici önbelleği yenilendi!")
