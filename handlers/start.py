@@ -16,6 +16,7 @@ async def start_(client: Client, message: Message):
 \nBotun konutları için basınız /help daha fazla bilgi için ⬇️.
 \n\nDeveloped Sahip 🇹🇷 [MehmetBaba](https://t.me/EfsaneStar) 
  </b>"""
+
       
        
         reply_markup=InlineKeyboardMarkup(
