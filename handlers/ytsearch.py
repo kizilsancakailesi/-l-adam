@@ -16,7 +16,7 @@ import pyrogram
 logging.getLogger("pyrogram").setLevel(logging.WARNING)
 
 @app.on_message(pyrogram.filters.command(["link"]))
-async def ytsearch(_, message: Message):
+async def ytlink(_, message: Message):
     try:
         if len(message.command) < 2:
             await message.reply_text("/aramanın bağımsız değişkene ihtiyacı var!")
