@@ -11,8 +11,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Merhabalar 👋{message.from_user.first_name}!
-\nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu bir müzik botudur.
-\n\nGruplarınızda müzik dinleme keyfini çıkarın, Müzik Ücretsiz olduğu için ufak problemler olabilir. 
+\nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu müzik botudur.
+\n\nGruplarınıza alıp müzik dinleme keyfini çıkarın, Müzik ücretsiz olduğu için ufak problemler olabilir. 
 \nBotun komutları için basınız /help fazla bilgi için ⬇️.
 \n\nDeveloped Sahip 🇹🇷 [MehmetBaba](https://t.me/EfsaneStar) 
   </b>""",
