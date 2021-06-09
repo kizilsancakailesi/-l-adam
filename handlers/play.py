@@ -158,10 +158,10 @@ def updated_stats(chat, queue, vol=100):
         stats = 'Settings of **{}**'.format(chat.title)
         if len(que) > 0:
             stats += '\n\n'
-            stats += 'Volume : {}%\n'.format(vol)
-            stats += 'Songs in queue : `{}`\n'.format(len(que))
-            stats += 'Now Playing : **{}**\n'.format(queue[0][0])
-            stats += 'Requested by : {}'.format(queue[0][1].mention)
+            stats += 'Ses : {}%\n'.format(vol)
+            stats += 'Sırada olan şarkılar : `{}`\n'.format(len(que))
+            stats += 'Şimdi Yürütülen : **{}**\n'.format(queue[0][0])
+            stats += 'İstenen : {}'.format(queue[0][1].mention)
     else:
         stats = None
     return stats
@@ -181,7 +181,7 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('oynatlist 📖', 'playlist'),
+                InlineKeyboardButton('çalmalistesi 📖', 'oynatlist'),
                 
             ],
             [       
@@ -205,7 +205,7 @@ async def ee(client, message):
         await message.reply('Bu sohbette çalışan VC örneği yok')
 
 @Client.on_message(
-    filters.command("oyuncu")
+    filters.command("liste")
     & filters.group
     & ~ filters.edited
 )
@@ -325,7 +325,7 @@ async def m_cb(b, cb):
                 await cb.answer('Chat is not connected or already playng', show_alert=True)
         else:
             callsmusic.pytgcalls.resume_stream(chat_id)
-            await cb.answer('Music Resumed!')     
+            await cb.answer('Müzik Devam Etti!')     
     elif type_ == 'durdur':         
         if (
             chat_id not in callsmusic.pytgcalls.active_calls
@@ -354,7 +354,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('oybatlist 📖', 'playlist'),
+                    InlineKeyboardButton('Çalmalistesi 📖', 'oynatlist'),
                 
                 ],
                 [       
@@ -484,8 +484,8 @@ async def oynat(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('oynatlist', callback_data='playlist'),
-                    InlineKeyboardButton('Menu', callback_data='menu')
+                    InlineKeyboardButton('oynatlist 📖', callback_data='oynatlist'),
+                    InlineKeyboardButton('Menü 📔', callback_data='menu')
                 
                 ],                     
                 [
@@ -618,7 +618,7 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-                 InlineKeyboardButton('📖 oynatlist', callback_data='playlist'),
+                 InlineKeyboardButton('📖 çalmalistesi', callback_data='oynatlist'),
                  InlineKeyboardButton('Menu ⏯ ', callback_data='menu')     
              ],                     
              [
@@ -752,7 +752,7 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-               InlineKeyboardButton('📖 oynatlist', callback_data='playlist'),
+               InlineKeyboardButton('📖 çalmalistesi', callback_data='oynatlist'),
                InlineKeyboardButton('Menu ⏯ ', callback_data='menu')   
              ],                     
              [
