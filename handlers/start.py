@@ -9,9 +9,8 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
     & ~ filters.edited
 )
 async def start_(client: Client, message: Message):
-    await message.reply_sticker("CAACAgUAAxkBAAIp9mBtwBBZGywWEmV-WC8gcMArjusuAAKMAgACTp1xV6m-mtC1YTfoHgQ")
     await message.reply_text(
-        f"""<b>Halo {message.from_user.first_name}!
+        f"""<b>Merhabalar 👋{message.from_user.first_name}!
 \nSilahkan undang saya ke group anda agak saya bisa memutarkan lagu di Obrolan Suara Untuk Anda.
 \n\nJoin Ke Group Official saya di @Friendlycircle.
 \nTekan /help untuk melihat daftar perintah yang tersedia.
@@ -23,12 +22,12 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Join To My Group", url="https://t.me/Friendlycircle",
+                        "Join To My Group", url="https://t.me/sohbetskyfall",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/zeldamusicbot?startgroup=true"
+                        "➕ Add To Your Group ➕", url="https://t.me/türkishvoicebot?startgroup=true"
                     ) 
                 ]
             ]
@@ -42,12 +41,12 @@ async def start_(client: Client, message: Message):
 )
 async def start(client: Client, message: Message):
     await message.reply_text(
-        "💁🏻‍♂️ Do you want to search for a YouTube video?",
+        "💁🏻‍♂️YouTube videosu aramak istiyor musunuz? ?",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/Friendlycircle"
+                        "💬 Group", url="https://t.me/sohbetskyfall"
                     )
                 ],    
                 [    
@@ -93,7 +92,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/Friendlycircle"
+                        "🎵 müzik kanal", url="https://t.me/kanalEfsanestar"
                     )
                 ]
             ]
