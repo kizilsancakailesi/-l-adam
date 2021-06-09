@@ -11,23 +11,29 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Merhabalar 👋{message.from_user.first_name}!
-\nSilahkan undang saya ke group anda agak saya bisa memutarkan lagu di Obrolan Suara Untuk Anda.
-\n\nJoin Ke Group Official saya di @Friendlycircle.
-\nTekan /help untuk melihat daftar perintah yang tersedia.
-\n\nDeveloped by @oppaidaisukii
- </b>""",
+\nTelegram sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu bir müzik botudur.
+\n\nGruplarınıza müzik dinleme keyfinize bakınız, müzik sohbetinde takılmalar az da olsa olacaktır.ücretsiz olduğu için ufak problemler olabilir. 
+\nBotun konutları için basınız /help daha fazla bilgi için ⬇️.
+\n\nDeveloped Sahip 🇹🇷 [MehmetBaba](https://t.me/EfsaneStar) 
+ </b>"""
       
        
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                     InlineKeyboardButton(
-                        "Sohbet Group 💬", url="https://t.me/sohbetskyfall",
-
+                        "🎵 Music Kanalım", url="https://t.me/kanalEfsanestar",
+                    )
+                ],
+                [
                     InlineKeyboardButton(
-                        "Sohbet Group 💬", url="https://t.me/sohbetskyfall", 
-
-
+                        "💬 Group", url="https://t.me/sohbetskyfall"
+                    ),
+                    InlineKeyboardButton(
+                        "📣 Channel", url="https://t.me/sohbetlobisi"
+                    ),
+                    InlineKeyboardButton(
+                        "💾 kaynak kodu", url="https://t.me/Rgsohbet"
                     )
                 ],
                 [
