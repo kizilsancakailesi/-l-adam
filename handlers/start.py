@@ -22,12 +22,17 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "Join To My Group", url="https://t.me/sohbetskyfall",
+                        "Sohbet Group 💬", url="https://t.me/sohbetskyfall",
+
+                    InlineKeyboardButton(
+                        "Sohbet Group 💬", url="https://t.me/sohbetskyfall", 
+
+
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Add To Your Group ➕", url="https://t.me/türkishvoicebot?startgroup=true"
+                        "➕ Grubunuza Ekle ➕", url="https://t.me/türkishvoicebot?startgroup=true"
                     ) 
                 ]
             ]
