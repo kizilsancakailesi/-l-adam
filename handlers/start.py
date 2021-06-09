@@ -84,14 +84,14 @@ async def help(client: Client, message: Message):
 /dplay <song name> - play song you requested via deezer
 /splay <song name> - play song you requested via jio saavn
 /oynatlist - Show now playing list
-/current - Show now playing
-/indir <song name> - download songs you want quickly
-/arama <query> - search videos on youtube with details
+/geçerli - Show now playing
+/yükle <song name> - download songs you want quickly
+/link <query> - search videos on youtube with details
 /deezer <song name> - download songs you want quickly via deezer
 /saavn <song name> - download songs you want quickly via saavn
 /video <song name> - download videos you want quickly
 \n*Admins only*
-/player - open music player settings panel
+/oyuncu - open music player settings panel
 /durdur - pause song play
 /devam - resume song play
 /atla - play next song
