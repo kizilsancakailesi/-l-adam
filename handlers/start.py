@@ -15,8 +15,7 @@ async def start_(client: Client, message: Message):
 \n\nGruplarınıza müzik dinleme keyfinize bakınız, müzik sohbetinde takılmalar az da olsa olacaktır.ücretsiz olduğu için ufak problemler olabilir. 
 \nBotun konutları için basınız /help daha fazla bilgi için ⬇️.
 \n\nDeveloped Sahip 🇹🇷 [MehmetBaba](https://t.me/EfsaneStar) 
- </b>"""
-
+  </b>""",
       
        
         reply_markup=InlineKeyboardMarkup(
