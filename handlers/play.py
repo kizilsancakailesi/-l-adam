@@ -155,7 +155,7 @@ async def playlist(client, message):
 def updated_stats(chat, queue, vol=100):
     if chat.id in callsmusic.pytgcalls.active_calls:
     #if chat.id in active_chats:
-        stats = 'Settings of **{}**'.format(chat.title)
+        stats = 'Ayarlar **{}**'.format(chat.title)
         if len(que) > 0:
             stats += '\n\n'
             stats += 'Ses : {}%\n'.format(vol)
@@ -181,7 +181,7 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('çalmalistesi 📖', 'oynatlist'),
+                InlineKeyboardButton('çalma listesi 📖', 'oynatlist'),
                 
             ],
             [       
@@ -192,7 +192,7 @@ def r_ply(type_):
     return mar
 
 @Client.on_message(
-    filters.command("geçerli")
+    filters.command("bilgi")
     & filters.group
     & ~ filters.edited
 )
@@ -354,7 +354,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('Çalmalistesi 📖', 'oynatlist'),
+                    InlineKeyboardButton('Çalma listesi 📖', 'oynatlist'),
                 
                 ],
                 [       
@@ -484,7 +484,7 @@ async def oynat(_, message: Message):
             [   
                 [
                                
-                    InlineKeyboardButton('oynatlist 📖', callback_data='oynatlist'),
+                    InlineKeyboardButton('çalma listesi 📖', callback_data='oynatlist'),
                     InlineKeyboardButton('Menü 📔', callback_data='menu')
                 
                 ],                     
@@ -618,7 +618,7 @@ async def deezer(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-                 InlineKeyboardButton('📖 çalmalistesi', callback_data='oynatlist'),
+                 InlineKeyboardButton('📖 çalma listesi', callback_data='oynatlist'),
                  InlineKeyboardButton('Menu ⏯ ', callback_data='menu')     
              ],                     
              [
@@ -752,7 +752,7 @@ async def jiosaavn(client: Client, message_: Message):
     keyboard = InlineKeyboardMarkup(
          [   
              [
-               InlineKeyboardButton('📖 çalmalistesi', callback_data='oynatlist'),
+               InlineKeyboardButton('📖 çalma listesi', callback_data='oynatlist'),
                InlineKeyboardButton('Menu ⏯ ', callback_data='menu')   
              ],                     
              [
