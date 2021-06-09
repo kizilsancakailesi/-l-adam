@@ -130,7 +130,7 @@ async def playlist(client, message):
     global que
     queue = que.get(message.chat.id)
     if not queue:
-        await message.reply_text('Player is idle')
+        await message.reply_text('Player boşta')
     temp = []
     for t in queue:
         temp.append(t)
@@ -174,7 +174,7 @@ def r_ply(type_):
     mar = InlineKeyboardMarkup(
         [
             [
-                InlineKeyboardButton('⏹', 'ayril'),
+                InlineKeyboardButton('⏹', 'ayrilmak'),
                 InlineKeyboardButton('⏸', 'durdur'),
                 InlineKeyboardButton('▶️', 'devam'),
                 InlineKeyboardButton('⏭', 'atla')
@@ -192,7 +192,7 @@ def r_ply(type_):
     return mar
 
 @Client.on_message(
-    filters.command("current")
+    filters.command("geçerli")
     & filters.group
     & ~ filters.edited
 )
@@ -256,7 +256,7 @@ async def p_cb(b, cb):
                  msg += f'\n- Req by {usr}\n'
         await cb.message.edit(msg)      
 
-@Client.on_callback_query(filters.regex(pattern=r'^(play|pause|skip|leave|puse|resume|menu|cls)$'))
+@Client.on_callback_query(filters.regex(pattern=r'^(oynat|pause|atla|ayrilmak|durdur|devam|menu|cls)$'))
 @cb_admin_check
 async def m_cb(b, cb):
     global que    
@@ -347,7 +347,7 @@ async def m_cb(b, cb):
         marr = InlineKeyboardMarkup(
             [
                 [
-                    InlineKeyboardButton('⏹', 'ayril'),
+                    InlineKeyboardButton('⏹', 'ayrilmak'),
                     InlineKeyboardButton('⏸', 'pause'),
                     InlineKeyboardButton('▶️', 'devam'),
                     InlineKeyboardButton('⏭', 'atla')
@@ -396,8 +396,8 @@ async def m_cb(b, cb):
         else:
             await cb.answer('Chat is not connected!', show_alert=True)
 
-@Client.on_message(command("play") & other_filters)
-async def play(_, message: Message):
+@Client.on_message(command("oynat") & other_filters)
+async def oynat(_, message: Message):
     global que
     lel = await message.reply("🔄 **Lütfen bekleyiniz**")
     administrators = await get_administrators(message.chat)
@@ -757,8 +757,8 @@ async def jiosaavn(client: Client, message_: Message):
              ],                     
              [
                InlineKeyboardButton(
-                   text="Join Updates Channel",
-                   url='https://t.me/LaylaList')
+                   text="Sohbet kanalımız",
+                   url='https://t.me/sohbetskyfall')
              ],
              [       
                InlineKeyboardButton(
