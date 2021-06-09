@@ -84,7 +84,7 @@ async def help(client: Client, message: Message):
 /dplay <song name> - play song you requested via deezer
 /splay <song name> - play song you requested via jio saavn
 /oynatlist - Show now playing list
-/geçerli - Show now playing
+/bilgi - Show now playing
 /bul <song name> - download songs you want quickly
 /link <query> - search videos on youtube with details
 /deezer <song name> - download songs you want quickly via deezer
