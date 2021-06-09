@@ -89,7 +89,7 @@ async def help(client: Client, message: Message):
 /link <query> - search videos on youtube with details
 /deezer <song name> - download songs you want quickly via deezer
 /saavn <song name> - download songs you want quickly via saavn
-/video <song name> - download videos you want quickly
+/klip <song name> - download videos you want quickly
 \n*Admins only*
 /liste - open music player settings panel
 /durdur - pause song play
