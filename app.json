@@ -19,11 +19,11 @@
             "required": false,
             "value": "Muzik pınarı 🎵"
        },
-        "Apı_id": {
+        "API_ID": {
             "description": "From my.telegram.org/apps",
             "required": true
         },
-        "Apı_Hash": {
+        "API_HASH": {
             "description": "From my.telegram.org/apps",
             "required": true
         },
