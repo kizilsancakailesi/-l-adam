@@ -6,15 +6,15 @@
     "repository": "https://github.com/Mehmetbaba06/Muzik_Asistan_Telegram",
     "stack": "container",
     "env": {
-        "Sessions_Kodu": {
+        "SESSION_NAME": {
             "description": "Session string (pyrogram)",
             "required": true
         },
-        "Botun_Tokeni": {
+        "BOT_TOKEN": {
             "description": "From @BotFather",
             "required": true
         },
-        "Botunuzun_Adı": {
+        "BOT_NAME": {
             "description": "Your bot Name.",
             "required": false,
             "value": "Muzik pınarı 🎵"
@@ -27,11 +27,11 @@
             "description": "From my.telegram.org/apps",
             "required": true
         },
-        "Kullanıcı_id": {
+        "SUDO_USERS": {
             "description": "Full-access users, counted as admin everywhere, seperated by space.",
             "required": true
         },
-        "Şarkı_Süresi": {
+        "DURATION_LIMIT": {
             "description": "In minutes!",
             "required": true,
             "value": "50"
