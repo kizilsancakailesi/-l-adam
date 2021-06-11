@@ -1,8 +1,9 @@
-"name": "VCPlayBot",
+{
+    "name": "✯MusicPınarı✯",
     "logo": "https://telegra.ph/file/7ffa8d18b9b7f1b51a81e.jpg",
     "description": "Open-Source bot to play songs in your Telegram's Group Voice Chat. Powered by PyTgCalls.",
     "keywords": ["music", "voicechat", "telegram"],
-    "repository": "https://github.com/QueenArzoo/VCPlayBot",
+    "repository": "https://github.com/Mehmetbaba06/Muzik_Asistan_Telegram",
     "stack": "container",
     "env": {
         "SESSION_NAME": {
@@ -13,6 +14,11 @@
             "description": "From @BotFather",
             "required": true
         },
+        "BOT_NAME": {
+            "description": "Your VCPlayBot Name.",
+            "required": false,
+            "value": "Muzik Pınarı 🎵"
+       },
         "API_ID": {
             "description": "From my.telegram.org/apps",
             "required": true
@@ -24,12 +30,16 @@
         "SUDO_USERS": {
             "description": "Full-access users, counted as admin everywhere, seperated by space.",
             "required": true
-            "value": "797768146"
         },
         "DURATION_LIMIT": {
             "description": "In minutes!",
             "required": true,
-            "value": "15"
+            "value": "55"
         }
-    }
+    },
+    "buildpacks": [
+       {
+      "url": "heroku/python"
+       }
+     ]
   }
