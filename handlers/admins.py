@@ -62,7 +62,7 @@ async def devam(_, message: Message):
 @authorized_users_only
 async def stop(_, message: Message):
     if message.chat.id not in callsmusic.pytgcalls.active_calls:
-        await message.reply_text("❗Sesi aç kapat yap Efendim. Sorun olabilir.!")
+        await message.reply_text("❗Sesli sohbeti aç kapat yap Efendim. Sorun olabilir.!")
     else:
         try:
             callsmusic.queues.clear(message.chat.id)
@@ -70,7 +70,7 @@ async def stop(_, message: Message):
             pass
 
         callsmusic.pytgcalls.leave_group_call(message.chat.id)
-        await message.reply_text("❌ Müzik botu kapatıldı.🤖")
+        await message.reply_text(" Müzik botu kapatıldı ❌")
 
 
 @Client.on_message(command("atla") & other_filters)
