@@ -181,7 +181,7 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('çalma listesi 📖', 'oynatlist'),
+                InlineKeyboardButton('çalma listesi 📖', 'çalma listesi'),
                 
             ],
             [       
@@ -354,7 +354,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('Çalma listesi 📖', 'oynatlist'),
+                    InlineKeyboardButton('Çalma listesi 📖', 'çalma listesi'),
                 
                 ],
                 [       
@@ -533,7 +533,7 @@ async def oynat(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Oynatılıyor*** burada istenen şarkı {} 😜".format(
+        caption="▶️ **Oynatılıyor*** Burada istenen şarkı {} 👍".format(
         message.from_user.mention()
         ),
     )
@@ -567,7 +567,7 @@ async def deezer(client: Client, message_: Message):
                               invitelink = await client.export_chat_invite_link(chid)
                           except:
                               await lel.edit(
-                                  "<b>Add me as admin of yor group first</b>",
+                                  "<b>Önce beni yor grubunun yöneticisi olarak ekle</b>",
                               )
                               return
 
@@ -575,7 +575,7 @@ async def deezer(client: Client, message_: Message):
                               await USER.join_chat(invitelink)
                               await USER.send_message(message_.chat.id,"I joined this group for playing music in VC")
                               await lel.edit(
-                                  "<b>MusicAsistan userbot joined your chat</b>",
+                                  "<b>MusicAsistan userbot sohbetinize katıldı</b>",
                               )
 
                           except UserAlreadyParticipant:
@@ -611,7 +611,7 @@ async def deezer(client: Client, message_: Message):
         url = r[0]["url"]
     except:
         await res.edit(
-            "Found Literally Nothing, You Should Work On Your English!"
+            "Kelimenin tam anlamıyla hiçbir şey bulamadım, İngilizceniz üzerinde çalışmalısınız!"
         )
         is_playing = False
         return
