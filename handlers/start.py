@@ -33,7 +33,7 @@ async def start_(client: Client, message: Message):
                         "👨‍💻 Yardımcı Sahip", url="https://t.me/fisneci"
                     ),
                     InlineKeyboardButton(
-                        "🇹🇷 TR dil desteği", url="https://t.me/fisneci"
+                        "🇹🇷 TR dil desteği", url="https://t.me/kalhan2121"
                     )
                 ],
                 [
