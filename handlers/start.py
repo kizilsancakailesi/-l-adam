@@ -27,13 +27,13 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/sohbetskyfall"
+                        "💬 Group", url="https://t.me/AbeliaSohbett"
                     ),
                     InlineKeyboardButton(
-                        "📣 Channel", url="https://t.me/sohbetlobisi"
+                        "👨‍💻 Yardımcı Sahip", url="https://t.me/fisneci"
                     ),
                     InlineKeyboardButton(
-                        "💾 Bilgi", url="https://t.me/Rgsohbet"
+                        "🇹🇷 TR dil desteği", url="https://t.me/fisneci"
                     )
                 ],
                 [
