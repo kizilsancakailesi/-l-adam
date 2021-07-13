@@ -13,8 +13,8 @@ async def start_(client: Client, message: Message):
         f"""<b>Merhabalar 👋{message.from_user.first_name}!
 \nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu müzik botudur.
 \n\nGruplarınıza alıp müzik dinleme keyfini çıkarın, Müzik ücretsiz olduğu için ufak problemler olabilir. 
-\nBotun komutları için basınız /help fazla bilgi için ⬇️.
-\n\nDeveloped Sahip 🇹🇷 [MehmetBaba](https://t.me/EfsaneStar) 
+\nBotun komutları için /help komutuna basınız.
+\n\nDeveloped Sahip 🇹🇷 [MehmetBey](https://t.me/MehmetbabaTR) 
   </b>""",
       
        
@@ -38,7 +38,7 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Grubunuza Ekle ➕", url="https://t.me/TurkishVoicebot?startgroup=true"
+                        "➕ Grubunuza Ekle ➕", url="https://t.me/Mp3dinleme_Bot?startgroup=true"
                     ) 
                 ]
             ]
