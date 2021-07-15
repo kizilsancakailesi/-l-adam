@@ -181,7 +181,7 @@ def r_ply(type_):
                 
             ],
             [
-                InlineKeyboardButton('çalma listesi 📖', 'çalma listesi'),
+                InlineKeyboardButton('çalma listesi 📖', 'oynatlist'),
                 
             ],
             [       
@@ -354,7 +354,7 @@ async def m_cb(b, cb):
                 
                 ],
                 [
-                    InlineKeyboardButton('Çalma listesi 📖', 'çalma listesi'),
+                    InlineKeyboardButton('Çalma listesi 📖', 'oynatlist'),
                 
                 ],
                 [       
@@ -516,7 +516,7 @@ async def oynat(_, message: Message):
         qeue.append(appendable)
         await message.reply_photo(
         photo="final.png", 
-        caption=f"🚨 İstenilen şarkı **Sıraya** pozisyonda alındı {position}!",
+        caption=f"🚨 İstenilen şarkı **Sıraya** alındı {position}!",
         reply_markup=keyboard)
         os.remove("final.png")
         return await lel.delete()
@@ -533,7 +533,7 @@ async def oynat(_, message: Message):
         await message.reply_photo(
         photo="final.png",
         reply_markup=keyboard,
-        caption="▶️ **Oynatılıyor*** Burada istenen şarkı {} 👍".format(
+        caption="▶️ **Oynatılıyor** Burada istenen şarkı {} 👍".format(
         message.from_user.mention()
         ),
     )
