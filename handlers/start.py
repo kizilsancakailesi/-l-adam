@@ -14,7 +14,7 @@ async def start_(client: Client, message: Message):
 \nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu müzik botudur.
 \n\nGruplarınıza alıp müzik dinleme keyfini çıkarın, Müzik ücretsiz olduğu için ufak problemler olabilir. 
 \nBotun komutları için /help komutuna basınız.
-\n\nDeveloped Sahip 🇹🇷 [MehmetBey](https://t.me/MehmetbabaTR) 
+\n\nDeveloped Sahip 🇹🇷 [Mahoaga](https://t.me/Mahoaga) 
   </b>""",
       
        
@@ -27,18 +27,18 @@ async def start_(client: Client, message: Message):
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/AbeliaSohbett"
+                        "💬 Group", url="https://t.me/Sohbetskyfall"
                     ),
                     InlineKeyboardButton(
-                        "👨‍💻 Yardımcı Sahip", url="https://t.me/fisneci"
+                        "👨‍💻 Yardımcı Sahip", url="https://t.me/Mahoaga"
                     ),
                     InlineKeyboardButton(
-                        "🇹🇷 TR dil desteği", url="https://t.me/kalhan2121"
+                        "🇹🇷 TR dil desteği", url="https://t.me/byboss"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Grubunuza Ekle ➕", url="https://t.me/Mp3dinleme_Bot?startgroup=true"
+                        "➕ Grubunuza Ekle ➕", url="https://t.me/Efsanestar_bot?startgroup=true"
                     ) 
                 ]
             ]
