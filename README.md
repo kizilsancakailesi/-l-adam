@@ -1,6 +1,6 @@
 # Nasıl mı yüklenir 🤔
 Bu Botu dağıtmanın en kolay yolu // **Çok tatlı müzik keyfi için repoyu Kurunuz.. Tarih:2021.09. Çarşamba saat:14.20**...
-<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Mehmetbaba06/Muzik_Asistan_Telegram"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
+<p align="center"><a href="https://heroku.com/deploy?template=https://github.com/Mehmetbaba55/Muzik_Asistan_Telegram"> <img src="https://img.shields.io/badge/Deploy%20To%20Heroku-red?style=for-the-badge&logo=heroku" width="220" height="38.45"/></a></p>
 
 Get STRING_NAME from here:
 
