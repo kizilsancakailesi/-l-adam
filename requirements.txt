@@ -17,4 +17,6 @@ future
 psutil
 wget
 tswift
- 
+git+https://github.com/pyrogram/pyrogram
+git+https://github.com/pytgcalls/pytgcalls
+OpenCC
