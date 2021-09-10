@@ -11,10 +11,10 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
 async def start_(client: Client, message: Message):
     await message.reply_text(
         f"""<b>Merhabalar 👋{message.from_user.first_name}!
-\nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu müzik botudur.
-\n\nGruplarınıza alıp müzik dinleme keyfini çıkarın, Müzik ücretsiz olduğu için ufak problemler olabilir. 
+\nTelegram'ın sesli sohbetinde müzik dinlemek için yazılmış açık kaynak kodlu müzik ve video izleme botudur.
+\n\nGruplarınıza alıp müzik dinleme ve video izleme keyfini çıkarın, Müzik ve ücretsiz olduğu için ufak problemler olabilir. 
 \nBotun komutları için /help komutuna basınız.
-\n\nDeveloped Sahip 🇹🇷 [Mahoaga](https://t.me/Mahoaga) 
+\n\nDeveloped Sahip 🇹🇷 [ADSIZ KAPTAN](https://t.me/Kizilsancaksahibi) 
   </b>""",
       
        
@@ -22,23 +22,23 @@ async def start_(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🎵 Music Kanalım", url="https://t.me/kanalEfsanestar",
+                        "🎵 Music Kanalım", url="https://t.me/Solofej",
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/Sohbetskyfall"
+                        "💬 Group", url="https://t.me/Smailesi"
                     ),
                     InlineKeyboardButton(
-                        "👨‍💻 Yardımcı Sahip", url="https://t.me/Mahoaga"
+                        "👨‍💻 Yardımcı Sahip", url="https://t.me/TeleWistKral"
                     ),
                     InlineKeyboardButton(
-                        "🇹🇷 TR dil desteği", url="https://t.me/byboss"
+                        "🇹🇷 TR dil desteği", url="https://t.me/KanliReis"
                     )
                 ],
                 [
                     InlineKeyboardButton(
-                        "➕ Grubunuza Ekle ➕", url="https://t.me/Efsanestar_bot?startgroup=true"
+                        "➕ Grubunuza Ekle ➕", url="https://t.me/Ellycarlmusicbot?startgroup=true"
                     ) 
                 ]
             ]
@@ -57,7 +57,7 @@ async def start(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "💬 Group", url="https://t.me/sohbetskyfall"
+                        "💬 Group", url="https://t.me/Smailesi"
                     )
                 ],    
                 [    
@@ -103,7 +103,7 @@ async def help(client: Client, message: Message):
             [
                 [
                     InlineKeyboardButton(
-                        "🎵 müzik kanal", url="https://t.me/kanalEfsanestar"
+                        "🎵 müzik kanal", url="https://t.me/Smailesi"
                     )
                 ]
             ]
