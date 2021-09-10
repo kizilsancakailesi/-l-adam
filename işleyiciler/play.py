@@ -491,7 +491,7 @@ async def oynat(_, message: Message):
                 [
                     InlineKeyboardButton(
                         text="Kanal ve Mp3 🎵",
-                        url=f"https://t.me/kanalEfsanestar")
+                        url=f"https://t.me/kizilsancakbilgi")
 
                 ],
                 [       
@@ -758,7 +758,7 @@ async def jiosaavn(client: Client, message_: Message):
              [
                InlineKeyboardButton(
                    text="Sohbet kanalımız",
-                   url='https://t.me/sohbetskyfall')
+                   url='https://t.me/smailesi')
              ],
              [       
                InlineKeyboardButton(
